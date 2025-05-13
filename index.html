@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denúncia de Descarte Ilegal de Lixo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Denúncia de Descarte Ilegal de Lixo</h1>
+            <p>Ajude a manter Itapoã limpa. Registre aqui o descarte ilegal de resíduos.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Faça sua denúncia</h2>
+            <form id="denunciaForm">
+                <label for="descricao">Descrição do Descarte:</label>
+                <textarea id="descricao" name="descricao" rows="4" required></textarea>
+
+                <label for="local">Localização (endereço aproximado):</label>
+                <input type="text" id="local" name="local" required>
+
+                <label for="imagem">Adicionar Imagem (Opcional, até 5MB):</label>
+                <input type="file" id="imagem" name="imagem" accept="image/*">
+
+                <button type="submit">Enviar Denúncia</button>
+            </form>
+        </section>
+
+        <section class="qr-code-section">
+            <h2>Escaneie ou clique no QR Code para acessar o site do Governo do DF!</h2>
+            <a href="https://www.df.gov.br/fale-com-o-governo/" target="_blank">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.df.gov.br/fale-com-o-governo/&size=150x150" alt="QR Code">
+        </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Projeto Itapoã. Todos os direitos reservados - Jhon L. F. Fernandes.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

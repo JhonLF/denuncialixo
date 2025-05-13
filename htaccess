@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# Redirecionar requisições para a API para o backend
+RewriteCond %{REQUEST_URI} ^/api/
+RewriteRule ^(.*)$ http://localhost:5500/$1 [P,L]
+
+# Permitir acesso ao diretório de uploads
+RewriteCond %{REQUEST_URI} ^/uploads/
+RewriteRule ^(.*)$ /backend/uploads/$1 [L]
+
+# Redirecionar todas as outras requisições para o frontend
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
